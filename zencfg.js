@@ -71,7 +71,9 @@ exports.getZenConfig = () => {
   }
 
   // build url
-  const url = `http://${zencfg.rpcconnect}:${zencfg.rpcport}`;
+  console.log(`>>Zenconfig ${JSON.stringify(zencfg)}`)
+  const url = `http://${process.env.HORIZEN}:${zencfg.rpcport}`;
+  console.log(`>>URL ${url}`)
   zencfg.url = url;
 
   if (foundMax) {
